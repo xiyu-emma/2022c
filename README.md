@@ -91,3 +91,54 @@ int main()
     printf("中的是:%d", b);
 }
 ```
+# week07
+## 印出n行星星金字塔
+week07考試內容
+```cpp
+#include <stdio.h>
+
+int main()
+{
+	int n;
+	scanf("%d", &n);
+	
+	for(int i=1; i<=n; i++){
+		for(int j=1; j<=n-i; j++) printf(" ");
+		for(int j=1; j<=i*2-1; j++) printf("*");
+		
+		printf("\n");
+	}
+}
+```
+## 印出大數
+使用long long int印出18~19位元的數
+```cpp
+#include <stdio.h>
+
+int main()
+{
+    int n=1234567812345678;
+    printf("%d\n", n);
+
+    long long int a=1234567812345678;
+    printf("%lld\n", a);
+}
+```
+## 最大公因數(大數版本)
+方法1 暴力法(很慢!!!)
+```cpp
+#include <stdio.h>
+
+int main()
+{
+    long long int a, b, ans, i;
+
+    scanf("%lld%lld", &a, &b);
+
+    for(i=1; i<=a; i++){
+        if(a%i==0 && b%i==0) ans=i;
+    }
+    printf("答案是:%lld\n", ans);
+}
+```
+方法2 輾轉相除法
