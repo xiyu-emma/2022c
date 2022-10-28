@@ -161,3 +161,107 @@ int main()
     printf("答案是:%lld\n", b);
 }
 ```
+# week08
+## 印出最大公因數
+week08考試內容
+```cpp
+#include <stdio.h>
+
+int main()
+{
+    int a, b, c;
+
+    scanf("%d%d", &a, &b);
+
+    while(1){
+        c = a%b;
+        printf("%d%d%d\n", a, b, c);
+        if(c==0) break;
+        a=b;
+        b=c;
+    }
+    printf("%d\n", b);
+}
+```
+##印出直角星星三角形
+
+2個for
+```cpp
+#include <stdio.h>
+
+int main()
+{
+    int i, j, n;
+
+    scanf("%d", &n);
+
+    for(i=1; i<=n; i++){
+        for(j=1; j<=n; j++){
+            if(j <= n-i) printf(" ");
+            else printf("*");
+        }
+        printf("\n");
+    }
+}
+```
+2個while
+```cpp
+#include <stdio.h>
+
+int main()
+{
+    int i=1, j, n;
+
+    scanf("%d", &n);
+
+    while(i <= n){
+        j = 1;
+        while(j <= n){
+            if(j <= n-i) printf(" ");
+            else printf("*");
+            j++;
+        }
+        i++;
+        printf("\n");
+    }
+}
+```
+## 判斷質數
+```cpp
+#include <stdio.h>
+
+int main()
+{
+    int i, n;
+    int f=0;
+
+    printf("判斷數字是否為質數:");
+    scanf("%d", &n);
+
+    for(i=2; i<n; i++){
+        if(n%i == 0) f=1;
+    }
+
+    if(f=0) printf("%d是質數", n);
+    else printf("%d不是質數", n);
+}
+```
+## 找範圍1~n內的質數
+```cpp
+#include <stdio.h>
+
+int main()
+{
+    int i, n, a, f;
+
+    scanf("%d", &a);
+
+    for(n=2; n<=a; n++){
+        f=0;
+        for(i=2; i<n; i++){
+            if(n%i == 0) f=1;
+        }
+        if(f==0) printf("%d ", n);
+    }
+}
+```
