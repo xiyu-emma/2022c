@@ -265,3 +265,55 @@ int main()
     }
 }
 ```
+# week10
+## 找範圍1~n內的質數
+week10考試題目
+```cpp
+#include <stdio.h>
+
+int main()
+{
+    int i, n, a, f;
+
+    scanf("%d", &a);
+
+    for(n=2; n<=a; n++){
+        f=0;
+        for(i=2; i<n; i++){
+            if(n%i == 0) f=1;
+        }
+        if(f==0) printf("%d ", n);
+    }
+}
+```
+## 印出陣列
+```cpp
+#include <stdio.h>
+
+int main()
+{
+    int a[4] = {10, 20, 30, 40};
+
+    printf("a[0]:%d\n", a[0]);
+    printf("a[1]:%d\n", a[1]);
+    printf("a[2]:%d\n", a[2]);
+    printf("a[3]:%d\n", a[3]);
+}
+```
+## 印出陣列 (倒著印)
+```cpp
+#include <stdio.h>
+
+int main()
+{
+    int a[4] = {10, 20, 30, 40};
+    int i;
+
+    for(i=0; i<4; i++){
+        printf("a[%d]:%d\n", i,a[i]);
+    }
+    for(i=3; i>=0; i--){
+        printf("a[%d]:%d\n", i,a[i]);
+    }
+}
+```
