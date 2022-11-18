@@ -183,7 +183,7 @@ int main()
     printf("%d\n", b);
 }
 ```
-##印出直角星星三角形
+## 印出直角星星三角形
 
 2個for
 ```cpp
@@ -315,5 +315,65 @@ int main()
     for(i=3; i>=0; i--){
         printf("a[%d]:%d\n", i,a[i]);
     }
+}
+```
+# week11
+## 印出陣列 (倒著印)
+week11考試內容
+```cpp
+#include <stdio.h>
+
+int main()
+{
+    int a[4] = {10, 20, 30, 40};
+    int i;
+
+    for(i=0; i<4; i++){
+        printf("a[%d]:%d\n", i,a[i]);
+    }
+    for(i=3; i>=0; i--){
+        printf("a[%d]:%d\n", i,a[i]);
+    }
+}
+```
+## 兩數交換
+使用temp
+```cpp
+#include <stdio.h>
+int main()
+{
+    int a=90, b=80, temp;
+    printf("a:%d b:%d\n", a, b);
+
+    temp = a;
+    a = b;
+    b = temp;
+
+    printf("a:%d b:%d\n", a, b);
+}
+```
+## 三數排序
+```cpp
+#include <stdio.h>
+int main()
+{
+    int a=90, b=80, c=70, temp;
+
+    if(a>b){
+        temp = a;
+        a = b;
+        b = temp;
+    }
+    if(b>c){
+        temp = b;
+        b = c;
+        c = temp;
+    }
+    if(a>b){
+        temp = a;
+        a = b;
+        b = temp;
+    }
+    printf("a:%d b:%d c:%d\n", a, b, c);
 }
 ```
