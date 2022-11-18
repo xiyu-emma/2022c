@@ -377,3 +377,110 @@ int main()
     printf("a:%d b:%d c:%d\n", a, b, c);
 }
 ```
+## 泡泡排序
+排第一個數
+```cpp
+#include <stdio.h>
+int main()
+{
+    int a[10]={90, 80, 70, 60, 50, 40, 30, 20, 10, 0}, temp, i;
+
+    for(i=0; i<10; i++){
+        printf("%d ", a[i]);
+    }
+    printf("\n");
+
+    for(i=0; i<10-1; i++){
+        if(a[i] > a[i+1]){
+            temp = a[i];
+            a[i] = a[i+1];
+            a[i+1] = temp;
+        }
+    }
+
+    for(i=0; i<10; i++){
+        printf("%d ", a[i]);
+    }
+    printf("\n");
+}
+```
+複製n次程式碼，排n個數
+```cpp
+#include <stdio.h>
+int main()
+{
+    int a[10]={90, 80, 70, 60, 50, 40, 30, 20, 10, 0}, temp, i;
+
+    for(i=0; i<10; i++){
+        printf("%d ", a[i]);
+    }
+    printf("\n");
+
+    for(i=0; i<10-1; i++){
+        if(a[i] > a[i+1]){
+            temp = a[i];
+            a[i] = a[i+1];
+            a[i+1] = temp;
+        }
+    }
+
+    for(i=0; i<10; i++){
+        printf("%d ", a[i]);
+    }
+    printf("\n");
+
+    for(i=0; i<10-1; i++){
+        if(a[i] > a[i+1]){
+            temp = a[i];
+            a[i] = a[i+1];
+            a[i+1] = temp;
+        }
+    }
+
+    for(i=0; i<10; i++){
+        printf("%d ", a[i]);
+    }
+    printf("\n");
+
+    for(i=0; i<10-1; i++){
+        if(a[i] > a[i+1]){
+            temp = a[i];
+            a[i] = a[i+1];
+            a[i+1] = temp;
+        }
+    }
+
+    for(i=0; i<10; i++){
+        printf("%d ", a[i]);
+    }
+    printf("\n");
+}
+```
+使用迴圈，把所有數字排序完成
+```cpp
+#include <stdio.h>
+int main()
+{
+    int a[10]={90, 80, 70, 60, 50, 40, 30, 20, 10, 0}, temp, i, j;
+
+    for(i=0; i<10; i++){
+        printf("%d ", a[i]);
+    }
+    printf("\n");
+
+    for(j=0; j<10-1; j++){
+        for(i=0; i<10-1; i++){
+            if(a[i] > a[i+1]){
+                temp = a[i];
+                a[i] = a[i+1];
+                a[i+1] = temp;
+            }
+        }
+
+        for(i=0; i<10; i++){
+            printf("%d ", a[i]);
+        }
+        printf("\n");
+    }
+}
+```
